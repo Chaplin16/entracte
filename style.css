@@ -1,0 +1,77 @@
+.navbar {
+  background-color: #86521d;
+  height: 5rem;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+.dropdown .btn {
+  margin-top: 2px;
+  color: #fff !important;
+}
+
+.dropdown .btn:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0;
+          box-shadow: 0 0 0 0;
+}
+
+.carousel {
+  margin: auto !important;
+}
+
+.size {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 35rem;
+}
+
+.carousel-caption {
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.carousel-caption p {
+  margin: auto;
+  font-size: 1.5rem;
+  width: 60%;
+}
+
+.carousel-caption .btn-carousel {
+  background-color: #fff;
+  color: #86521d;
+  text-shadow: 0px 1px 1px #86521d;
+  margin: 1rem 0;
+}
+
+.place {
+  color: #86521d;
+  text-align: center;
+  margin: 2rem auto 4rem;
+  width: 40%;
+  font-size: 1.8rem;
+  text-shadow: 0px 0px 1px #000;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
