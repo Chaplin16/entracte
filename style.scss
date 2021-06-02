@@ -1,5 +1,8 @@
 $color-root: rgb(134, 82, 29);
 
+main{
+    background: url("images/circles-light.png");
+}
 .navbar{
     background-color: $color-root;
     height: 5rem;
@@ -9,7 +12,21 @@ $color-root: rgb(134, 82, 29);
 }
 .nav-link{
     color: #fff!important;
+    border-bottom: 0px solid #000;
+    font-size:1.5rem!important;;
+    &:hover{
+        color: #000!important;
+        border-bottom: 2px solid #000;
+    }
 }
+.dropdown .btn{
+    font-size:1.5rem!important;
+    &:hover{
+        border-bottom: 2px solid #000;
+        color: #000!important;
+    }
+}
+
 
 .dropdown {
     & .btn{
@@ -25,7 +42,6 @@ $color-root: rgb(134, 82, 29);
     margin: auto!important;
 }
 .size {
-
     width:100%;
     object-fit: contain;
     height: 35rem;
@@ -50,7 +66,7 @@ $color-root: rgb(134, 82, 29);
     color: $color-root;
     text-align:center;
     margin:2rem auto 4rem;
-    width: 40%;
+    width: 50%;
     font-size: 1.8rem;
     text-shadow: 0px 0px 1px #000;
 }
@@ -62,15 +78,196 @@ $color-root: rgb(134, 82, 29);
     -moz-user-select: none;
     user-select: none;
 }
+.container,
+.marketing {
+    max-width:100%!important;
+    margin:0!important;
+}
+
+.carousel-caption {
+    & .btn:focus{
+        outline:0;
+        box-shadow:0 0 0 0 ;
+    }
+}  
+
+.btn-carousel{
+    color: #fff!important;
+    background-color: $color-root!important;
+    transition: all 300ms;
+    box-shadow: 1px 2px 3px #000;
+    &:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 3px #000;
+    }
+}
+
+.roundImg{
+    border-radius: 40%;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.marketing a{
+    color: #fff;
+    background-color: $color-root;
+    transform: scale(1);
+    transition: all 300ms;
+    margin-bottom: 2rem;
+    &:hover,
+    &:focus{
+        transform: scale(1.1);
+        color: #fff;
+        background-color: $color-root;
+    }
+}
+.float-end a{
+    color: $color-root;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #000;
+    padding:0.5rem;
+    background-color: #fff;
+    &:hover{
+        background-color: rgb(248, 139, 49);
+        color:rgb(100, 54, 8)
+    }
+}
+footer{
+    background-color: $color-root;
+    padding:1rem 0;
+}
+
+// page menu
+
+.menuSalt h1,
+.menuSugar h1{
+    font-size: 4rem;
+    text-align: center;
+    color: $color-root;
+    padding-bottom: 3rem;
+}
+
+.menuSalt h1{
+    padding-top:6rem;
+}
+
+
+main {
+    width:100%;
+}
+
+.menuSalt,
+.menuSugar{
+    max-width:80%;
+    margin:auto;
+}
+
+.featurette-divider{
+    color:$color-root;
+
+}
+.menuImg{
+    width:300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.appear {
+
+}
 
 
 
+@media (max-width: 450px) {
+    .carousel-indicators{
+        display: none;
+    }
+    .carousel-caption{  
+        padding-bottom:2rem!important;
+        & h1{
+            padding-bottom:0.5rem;
+            font-size:1.3rem;
+        }
+        & p{
+            align-items: center;
+            font-size:1.3rem;
+            width: 13rem!important;
+        }
+    }
+    .size{
+        max-height: 18.5rem;
+    }
+    .btn-lg{
+        font-size: 1.1rem;
 
+    }
+}
 
-
+@media (max-width: 1400px) {
+    .place {
+        width:70%;
+    }
+}
 
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
     }
+    .navbar-collapse{
+        flex-grow:0!important;
+        margin-right:2rem!important;
+    }
+}
+
+@media (max-width: 768px) {
+    .dropdown .btn,
+    .nav-link{
+        color: #000!important;
+        background-color: $color-root;
+        width: 8rem;
+        display: inline-block;
+        &:hover{
+            border-bottom: 0px solid #000;
+            font-weight: 700;
+        }
+    }  
+    .nav-link{
+        text-align:center;
+    } 
+    .place{
+        width: 90%;
+    }
+    .size{
+        height: 25rem;
+    }
+    .carousel-caption {
+        padding-bottom:3rem;
+        & h1{
+        margin-bottom: 0;
+        }
+        & .btn-carousel{
+            margin:0!important;
+            padding:0 0.5rem;
+        }
+    }
+    .carousel-indicators {
+        padding-bottom:1.5rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    .marketing{
+        max-width:70%;
+        margin:auto;
+    }
+}
+
+
+@media (min-width: 992px) {
+    // .row>*{
+    //    max-width: 10rem;;
+
+    // }
 }
