@@ -86,6 +86,22 @@ main {
   height: 35rem;
 }
 
+.contactDetail {
+  background: #f1ac2a;
+  position: fixed;
+  top: 5rem;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  padding: 1rem;
+  z-index: 3;
+}
+
 .carousel-caption {
   color: #fff;
   text-shadow: 2px 2px 2px #000;
@@ -148,6 +164,8 @@ main {
           transform: scale(1.1);
   -webkit-box-shadow: 3px 3px 3px #000;
           box-shadow: 3px 3px 3px #000;
+  color: #ffee00 !important;
+  text-shadow: 1px 1px 2px #000;
 }
 
 .roundImg {
@@ -196,8 +214,6 @@ main {
 
 .footer .copyright {
   width: 100%;
-  -webkit-column-gap: 1rem;
-          column-gap: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,6 +228,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 1rem;
+  font-size: 1.2rem;
 }
 
 .footer .director {
@@ -231,24 +248,31 @@ main {
 }
 
 .footer .director a {
-  color: #bebc46;
+  color: #ffee00;
+  text-shadow: 1px 1px 2px #000;
   text-decoration: none;
 }
 
 .footer .director a:hover {
-  color: #e6f065;
-  text-shadow: 1px 1px 2px #ffa733;
+  color: #f3e6db;
 }
 
 .menuSalt h1,
-.menuSugar h1 {
+.menuSugar h1,
+.schedule h1,
+.map h2 {
   font-size: 4rem;
   text-align: center;
   color: #86521d;
   padding-bottom: 3rem;
 }
 
-.menuSalt h1 {
+.map h2 {
+  padding-top: 2rem;
+}
+
+.menuSalt h1,
+.schedule h1 {
   padding-top: 6rem;
 }
 
@@ -271,6 +295,14 @@ main {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.schedule .schedule_detail {
+  text-align: center;
+  border: 1px solid #86521d;
+  width: 60%;
+  margin: auto;
+  padding: 2rem;
 }
 
 @media (max-width: 450px) {
@@ -296,6 +328,13 @@ main {
   }
   .btn-lg {
     font-size: 1.1rem;
+  }
+  .contactDetail {
+    padding: 0.5rem;
+  }
+  .schedule .schedule_detail {
+    padding: 2rem 1rem;
+    width: 80%;
   }
 }
 
@@ -355,6 +394,14 @@ main {
   .col-lg-3 {
     width: 50%;
   }
+  .contactDetail {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .contactDetail .town,
+  .contactDetail .phone {
+    margin: auto;
+  }
 }
 
 @media (max-width: 550px) {
@@ -395,6 +442,15 @@ main {
   }
   .col-lg-3 {
     width: 35%;
+  }
+  .contactDetail {
+    position: -webkit-sticky;
+    position: sticky;
+    padding: 0.7rem;
+  }
+  .contactDetail .town,
+  .contactDetail .phone {
+    margin: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
