@@ -23,8 +23,9 @@ $color-root: rgb(134, 82, 29);
 }
 
 .featurette:nth-of-type(3){
-    animation: appear 2000ms 1000ms backwards;;
+    animation: appear 2000ms 1000ms backwards;
 }
+
 
 main{
     background: url("images/circles-light.png");
@@ -42,14 +43,16 @@ main{
     font-size:1.5rem!important;;
     &:hover{
         color: #000!important;
-        border-bottom: 2px solid #000;
+        border-bottom: 3px solid #000;
+        font-weight: bold;
     }
 }
 .dropdown .btn{
     font-size:1.5rem!important;
     &:hover{
-        border-bottom: 2px solid #000;
+        border-bottom: 3px solid #000;
         color: #000!important;
+        font-weight: bold;
     }
 }
 
@@ -176,34 +179,48 @@ main{
     }
 }
 
+//bas de page//
 .footer{
     background-color: $color-root;
+    padding-top: 1rem;
     padding-bottom: 1rem;
-    & .copyright{
-        width:100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding-top: 1rem;
-        font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    & .relance{
+        width: 10rem;
+        max-height: 6rem;
     }
     & .director{
+        font-weight: 700;;
         display: flex;
-        justify-content: center;
-        column-gap: 0.5rem;
+        flex-direction: column;
+        align-items: center;
+        column-gap:  2rem;
+        color: #fff;
         & img{
             width:4rem;
-            height: auto;
-            
+            max-height: 2rem;
         }
         & a{
-            color: #ffee00;
+            color: #fff;
             text-shadow: 1px 1px 2px #000;
             text-decoration: none;
+            font-weight: normal;
             &:hover{
-            color: #f3e6db;
+                color: #000;
+                text-shadow: 1px 1px 2px #000;
             }
+        }
+        & .law{
+            color: #fff;
+            font-size: 0.9rem!important;
+            text-shadow: 0 0 0 #000;
+            &:hover{
+                color: #000!important;
+
+            }
+            
         }
     }
 }
@@ -229,7 +246,6 @@ main{
     padding-top:6rem;
 }
 
-
 main {
     width:100%;
 }
@@ -244,10 +260,15 @@ main {
     color:$color-root;
 
 }
+
 .menuImg{
     width:300px;
     height: 300px;
-    object-fit: cover;
+    object-fit: cover;   
+}
+
+.espace{
+    padding-left: 3.5rem;
 }
 
 // page info (horaire-acces)
@@ -259,6 +280,40 @@ main {
     padding:2rem;
 }
 
+//page law.html
+.mentions{
+    padding-top: 3rem;
+    padding-left:3.5rem;
+    & h1{
+        padding-bottom: 2rem;
+        color: $color-root;
+        text-shadow: 1px 1px 2px #000; 
+    }
+    & .font{
+        color: rgb(63, 60, 60);
+        font-weight: bold;
+    }
+}
+.return_home{
+    padding-left:7vh;
+    align-items: center;
+    margin-top:3rem;
+    .link_home{
+        text-decoration: none;
+        color: rgb(88, 88, 88);
+        text-shadow: 1px 1px 2px #000; 
+        font-weight: bold;
+        padding-bottom: 45%;
+        &:hover{
+            color: #000;
+            font-weight: normal;
+        }
+        & .arrow{
+            width:40px;
+            margin-right: 1rem;
+        }
+    }
+}
 
 @media (max-width: 450px) {
     .carousel-indicators{
@@ -291,12 +346,6 @@ main {
     }
 }
 
-@media (max-width: 1400px) {
-    .place {
-        width:70%;
-    }
-}
-
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
@@ -310,7 +359,7 @@ main {
 @media (max-width: 768px) {
     .dropdown .btn,
     .nav-link{
-        color: #000!important;
+        color: #fff!important;
         background-color: $color-root;
         width: 8rem;
         display: inline-block;
@@ -322,6 +371,11 @@ main {
     .nav-link{
         text-align:center;
     } 
+    .infoNav ul{
+        margin-top :3.7rem;
+        margin-left:0!important;
+        padding-left:0!important;
+    }
     .place{
         width: 90%;
     }
@@ -353,6 +407,44 @@ main {
     }
 }
 
+@media (max-width: 692px) {
+    .espace{
+        padding-left: 0;
+        text-align:justify;
+    }
+    .espace_again{
+        text-align: justify;
+    }
+    .row{
+        text-align:center!important;
+        & h2{
+            margin: 1rem;
+            text-align:center!important;
+        }
+    }
+    .footer{
+        flex-direction: column;
+        & .relance{
+            margin: auto;
+            margin-bottom: 0.5rem;
+        }
+        & .director{
+            display: flex;
+            & img{
+                width:4.5rem;
+                max-height: 2.5rem;
+                margin: 0.5rem;
+            }
+        }
+        & .law{
+            color: rgb(223, 221, 221)!important;
+        }
+    }
+    .mentions{
+        padding-left:2rem;
+    }
+}
+
 @media (max-width: 550px) {
     .row{
         display: block;
@@ -376,14 +468,6 @@ main {
     }
 }
 
-@media (min-width: 1100px) {
-    .marketing{
-        max-width:70%;
-        margin:auto;
-    }
-}
-
-
 @media (max-width: 992px) {
   .row{
       justify-content: space-around;
@@ -402,3 +486,16 @@ main {
 }
 }
 
+
+@media (min-width: 1100px) {
+    .marketing{
+        max-width:70%;
+        margin:auto;
+    }
+}
+
+@media (max-width: 1400px) {
+    .place {
+        width:70%;
+    }
+}
